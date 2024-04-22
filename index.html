@@ -8,7 +8,8 @@
     <div>THIS IS A HOSTED PAGE FOR SMARTSHEET URL REDIRECTS</div>
     <script>
         const queryString = window.location.search.slice(3); 
-        const myParam = decodeURIComponent(queryString);
+        const decodedQueryString  = decodeURIComponent(queryString);
+        const myParam = decodedQueryString.replace(/%20/g, ' ');
         debugger
         if (myParam) {
               const url = /^(http|https):\/\//.test(myParam) ? myParam : 'http://' + myParam;
