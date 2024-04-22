@@ -11,7 +11,8 @@
         const myParam = decodeURIComponent(queryString);
         debugger
         if (myParam) {
-            window.open(myParam, '_blank');
+              const url = /^(http|https):\/\//.test(myParam) ? myParam : 'http://' + myParam;
+                window.open(url, '_blank');
         }
     </script>
 </body>
