@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>THIS IS A HOSTED PAGE FOR SMARTSHEET URL REDIRECTS</div>
+    <script>
+        const queryString = window.location.search.slice(3); 
+        const myParam = decodeURIComponent(queryString);
+        debugger
+        if (myParam) {
+            window.open(myParam, '_blank');
+        }
+    </script>
+</body>
+</html>
